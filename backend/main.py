@@ -19,13 +19,15 @@ os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
 
 class Character:
     def __init__(self, data:dict):
+        self._id = str(data.get('_id'))
         self.name = data.get('name')
         self.ban = data.get('ban')
+        self.category = data.get('category')
         self.primary_image = data.get('primary_image')
 
     
     @classmethod
-    def new(cls, name:str, ban:bool, file:UploadFile):
+    def new(cls, name:str, category:str, ban:bool, file:UploadFile):
 
         unique_filename = f"{uuid4()}{os.path.splitext(file.filename)[1]}"
         file_location = os.path.join(UPLOAD_DIRECTORY, unique_filename)
@@ -35,6 +37,7 @@ class Character:
 
         data = {
             "name": name,
+            "category": category,
             "ban": ban,
             "primary_image": file_location
         }
@@ -45,17 +48,10 @@ class Character:
 
         
 
-    
-
-
-
 @app.post('/api/characters/upload')
-async def character_upload(name:Annotated[str, Form()], ban:Annotated[bool, Form()], file:Annotated[UploadFile, File()]):
-    
-    
+async def character_upload(name:Annotated[str, Form()], category:Annotated[str, Form()], ban:Annotated[bool, Form()], file:Annotated[UploadFile, File()]):
 
-    char = Character.new(name, ban, file)
-
+    char = Character.new(name, category, ban, file)
 
     return {'success':True, 'character': char.__dict__}
     
@@ -65,6 +61,13 @@ async def api_characters():
     characters_list = [Character(data).__dict__ for data in characters.find()]
 
     return {'success': True, 'characters': characters_list}
+
+@app.get('/api/categories')
+async def api_categories():
+    characters_list = characters.find()
+    categories = set(Character(c).category for c in characters_list)
+
+    return {'success': True, 'categories': categories}
 
 
 
