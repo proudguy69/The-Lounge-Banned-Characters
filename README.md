@@ -1,33 +1,10 @@
 # Banned Characters
 
-This template should help get you started developing with Vue 3 in Vite.
+##  THIS IS FOR STAFF ONLY DO NOT SHARE THIS WEBSITE
+> I made this little website for you guys (and myself) to help me better moderate channel, it has a VISUAL reference of the banned characters, you can go to the admin portal and add your own here if you wish, please do not add duplicate characters, I will add a search feature to sort by channel or category in the future.
+> PLEASE REFER TO THE VIDEO TO SEE HOW IT WORKS
+> Dm me for any feature requets
+> Discord auth will happen soon, by then youll be able to make site public
+https://neonshells.art/
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+(this is not offically endorsed by tenekris and was made by me, i had asked him  if i could do this and he said its "okay". this is my own personal project. I am not paid for this, this is just to make my life and ur lives easier.

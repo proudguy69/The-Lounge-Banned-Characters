@@ -18,6 +18,11 @@ const items = ref([
     {
         label: "Admin portal",
         to: '/admin'
+    },
+    {
+        label: 'github',
+        to: 'https://github.com/proudguy69/The-Lounge-Banned-Characters',
+        icon: 'mdi:github'
     }
 ])
 
